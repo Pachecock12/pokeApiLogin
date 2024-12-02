@@ -1,0 +1,77 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fondo blanco para la tabla */
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 12px; /* Espaciado dentro de las celdas */
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.img-thumbnail {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.pagination-controls {
+  margin-top: 20px;
+}
+
+body {
+  background: linear-gradient(135deg, #cbac11, #fc2525); /* Fondo degradado moderno */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logout-menu {
+  position: absolute;
+  top: 100%; /* Justo debajo del avatar */
+  left: 0; /* Alineado con el avatar */
+  margin-top: 5px; /* Espaciado extra si es necesario */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.d-flex img {
+  object-fit: cover;
+}
+
+.btn i {
+  margin-right: 5px; /* Espaciado entre icono y texto */
+}
+
+.table thead {
+  background-color: #f8f9fa;
+}
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody td {
+  text-align: center;
+}

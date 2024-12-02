@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <!-- Encabezado con avatar y nombre del usuario -->
+  <div class="d-flex align-items-center justify-content-between position-relative mb-4">
+    <div class="d-flex align-items-center position-relative">
+      <img 
+        [src]="userAvatar" 
+        alt="User Avatar" 
+        class="rounded-circle me-2" 
+        style="cursor: pointer; width: 40px; height: 40px;" 
+        (click)="toggleLogoutMenu()" 
+      />
+      <span class="fw-bold">{{ userName }}</span>
+      <div *ngIf="showLogoutMenu" class="logout-menu">
+        <button class="btn btn-danger btn-sm" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center mb-4">Lista de Pokémon</h2>
+
+  <!-- Buscador -->
+  <input 
+    type="text" 
+    class="form-control mb-3" 
+    placeholder="Buscar Pokémon..." 
+    [(ngModel)]="searchTerm" 
+    (input)="filterPokemon()" 
+  />
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>No.</th>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pokemon of filteredPokemon | paginate: { itemsPerPage: 10, currentPage: page }">
+          <td>{{ pokemon.id }}</td>
+          <td>
+            <img 
+              [src]="pokemon.image" 
+              alt="{{ pokemon.name }}" 
+              class="img-thumbnail" 
+              style="width: 80px; height: 80px;" 
+            />
+          </td>
+          <td>{{ pokemon.name }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm me-2" (click)="editPokemon(pokemon)">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button class="btn btn-danger btn-sm me-2" (click)="deletePokemon(pokemon)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+            <button class="btn btn-info btn-sm" (click)="viewDetails(pokemon)">
+              <i class="bi bi-eye-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <pagination-controls 
+    (pageChange)="page = $event" 
+    class="d-flex justify-content-center mt-3">
+  </pagination-controls>
+</div>

@@ -1,0 +1,68 @@
+.bg-gradient {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  
+  .ventana-cuadrada {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    color: #333;
+  }
+  
+  .form-control {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 10px; 
+  }
+  
+  .form-control::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+  
+  a.text-muted {
+    font-size: 0.9rem;
+    color: #6a11cb;
+  }
+  
+  a.text-muted:hover {
+    color: #2575fc;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+  }
